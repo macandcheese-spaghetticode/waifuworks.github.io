@@ -1,1 +1,102 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="0; url=https://ubiquitous-adventure-vr9m35w.pages.github.io/" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">A WaifuWorks LLC Production
+<br>in Association with Blue Buddha LLC 
+<br>and the People at 
+Data Department Depot LLC</h1>
+<I><u><h1><p style="text-align:center;">The Ruby Saga Waifu Portfolio</p></u></h1></I>
+
+<p style="text-align:center;"><img src="Waifu transmission.png" 
+alt="Waifu transmission.com" width="400" height="400"><img src="harem I guess.png" alt="harem I guess.com" width="400" height="400"><img src="Puder and the toilet princess.png" alt="Puder and the toilet princess.com" width="400" height="400"></p>
+
+<div class="row">
+  <div class="column">
+    <br> Here's the chance to collect all 100 some odd incarnations of the 
+    <br>  Chinese cyber torture VR game sweeping the nations of Taiwan
+    <br> and the free Americas. For $250 USD you can collect all the digital
+
+ <br>copies of Saison Xiang's creations of the OG telepathic psycho asian 
+<br>  waifu, RubyTeacher and the psycho sisters Hirro and CantBackDown. 
+<br>
+<br>
+<br>
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=Ab72U_9t7Y7nmNevtQ9096D5jk8jHsQhLQcgNe26X9tfpi2MeCH2EGJoHXOA8VPDaQhxNmMQfN27C4ND&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'pill',
+          color: 'blue',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"The complete digital fan art portfolio of the Ruby Saga of VR chat games from Saison Xiang","amount":{"currency_code":"USD","value":250}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+  </div>
+  <div class="column">
+     <p style="text-align:center;"><img src="port.png" alt="port.com" width="600" height="400"></p> 
+  </div>
+</div>
+
+</body>
+</html>
